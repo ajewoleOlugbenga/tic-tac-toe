@@ -15,7 +15,7 @@ const Player = (props) => {
     }
 
   return (
-    <li>
+    <li className={props.isActive ? "active" : undefined}>
       <span className="player">
         { isEditing ? <input type="text" required value={playerName} onChange={ChangePlayerNameHandler}/> :<span className="player-name">{playerName}</span>}
         <span className="player-x">{props.symbol}</span>
